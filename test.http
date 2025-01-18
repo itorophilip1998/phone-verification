@@ -1,0 +1,30 @@
+# Twilio Lookup API for Carrier and Caller Name
+POST https://lookups.twilio.com/v2/PhoneNumbers/+2347077541387
+Authorization: Basic {{base64_encoded_account_sid_and_auth_token}}
+Content-Type: application/json
+
+{
+  "type": ["carrier", "caller-name"]
+}
+
+###
+
+# Third-Party API for Name and Personal Info Verification
+POST https://api.thirdparty.com/verify
+Authorization: Bearer {{your_api_key}}
+Content-Type: application/json
+
+{
+  "phoneNumber": "+2347077541387"
+}
+
+###
+
+# NumVerify API for Format, Location, and Carrier Info
+GET https://apilayer.net/api/validate?access_key={{your_access_key}}&number=+2347077541387
+Accept: application/json
+
+
+# using my local API
+POST http://localhost:3000/verify
+Accept: application/json
